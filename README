@@ -1,0 +1,28 @@
+This is a mirror of http://www.vim.org/scripts/script.php?script_id=3394
+
+Inspired by Kate 'bookmarks' and other scripts herein, I devised a convenient way to mark full lines and highlight them.
+
+The idea is to mark lines and then jump from one to the other, in an easier way than the one Vim provides.
+
+Lines with markers are highlighted, which is convenient to visually spot where the mark is.
+
+One does not need to remember which markers are already in use and which are free anymore, just add marks and remove marks, and the script will manage where to store them or free them.
+
+USAGE:
+<F1>            Turn on highlighting for all lines with markers on them
+<F2>            Turn off the highlighting for marked lines
+<SHIFT-F2> Erase all markers [a-z]
+<F5>             Add a mark on the current line (and highlight)
+<SHIFT-F5> Remove the mark on the current line
+
+Then, just jump from one mark to the next using the classic [' and ]' jumps
+
+Try it! it's nice!
+
+NOTE:
+Of course, the highlight group I define ("Marks") should be tweaked to one's taste, and the same applies to the keyboard mappings.
+
+NOTE-UPDATE:
+The classic marking method (ie. typing 'ma', 'mb', 'mc'...) can be used in combination with this one, but one has to be careful not to overwrite an existing mark. Check with the :marks command. HINT: the code marks from the 'a' to the 'z', so if there are not too many marks, one can safely assume that the last ones ('z 'x 'y 'w ...) are safe to use.
+
+Enjoy...
