@@ -6,7 +6,8 @@
 "  Inspired by Kate 'bookmarks' and other scripts herein, I devised a convenient way to mark lines and highlight mark lines.
 "  The idea is to mark lines and then jump from one to the other, in an easier way than the one Vim provides.
 "  Lines with markers are highlighted, which is convenient to visually spot where the mark is. 
-"  One does not need to remember which markers are already in use and which are free anymore, just add marks and remove marks, and the script will manage where to store them or free them.
+"  One does not need to remember which markers are already in use and which are free anymore, just add marks and remove 
+"  marks, and the script will manage where to store them or free them.
 "  
 "  USAGE:
 "  <F1>		Turn on highlighting for all lines with markers on them
@@ -20,14 +21,19 @@
 "  Try it! it's nice!
 "  
 "  NOTE:
-"  Of course, the highlight group I define ("Marks") should be tweaked to one's taste, and the same applies to the keyboard mappings.
+"  Of course, the highlight group I define ("Marks") should be tweaked to one's taste, 
+"  and the same applies to the keyboard mappings.
 "  
-"  OTHER NOTE:
-"  The code works with marks from 'a' to 'z', and it is intended to override the usual marking method (ie. typing 'ma', 'mb', 'mc'...).
-"  If someone would like to use both methods at the same time, I suggest to adjust the code and wherever char2nr('a') appears, substitute for char2nr('e') or whatever, so that marks from 'a' to 'd' (or whatever) are available for classic use. 
+"  NOTE-UPDATE:
+"  The classic marking method (ie. typing 'ma', 'mb', 'mc'...) can be used in
+"  combination with this one, but one has to be careful not to overwrite an
+"  existing mark. Check with the :marks command. HINT: the code marks from the
+"  'a' to the 'z', so if there are not too many marks, one can safely assume
+"  that the last ones ('z 'x 'y 'w ...) are safe to use.
+"
+"  Enjoy...
 
-
-hi Marks term=reverse ctermfg=0 ctermbg=4
+hi Marks term=reverse ctermfg=0 ctermbg=4 guibg=Grey40
 
 function! HLMarks(group)
 	call clearmatches()
