@@ -69,8 +69,8 @@ function! DelHLMark(group)
 	endwhile
 endfunction
 
-nmap <F1> :call HLMarks("Marks")<CR>
-nmap <F2> :call clearmatches()<CR>
-nmap <S-F2> :call clearmatches()\|:delmarks a-z<CR>
-nmap <F5> :call AddHLMark("Marks")<CR>
-nmap <S-F5> :call DelHLMark("Marks")<CR>
+nmap <silent> <F1> :call HLMarks("Marks")<CR>
+nmap <silent> <F2> :call clearmatches()<CR>
+nmap <silent> <S-F2> :call clearmatches()\|:delmarks a-z<CR>
+nmap <silent> <F5> :call AddHLMark("Marks")<CR>
+nmap <silent> <S-F5> :call DelHLMark("Marks")<CR>
