@@ -33,7 +33,7 @@
 "
 "  Enjoy...
 
-hi Marks term=reverse ctermfg=0 ctermbg=4 guibg=Grey40
+hi Marks term=reverse ctermfg=0 ctermbg=40 guibg=Grey40
 
 function! HLMarks(group)
 	call clearmatches()
